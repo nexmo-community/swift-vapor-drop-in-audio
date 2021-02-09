@@ -1,4 +1,4 @@
-# Swift Vonage SMS API with Vapor
+# Swift Client SDK Drop in Audio Chat Server
 
 <img src="https://developer.nexmo.com/assets/images/Vonage_Nexmo.svg" height="48px" alt="Nexmo is now known as Vonage" />
 
