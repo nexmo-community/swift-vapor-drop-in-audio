@@ -26,7 +26,12 @@ Open it in Xcode by running `vapor xcode` and wait for Xcode to download the pac
 
 Set a custom working directory for your project. Go to _Product > Scheme > Edit Scheme..._ and set the working directory to the root folder of your project.
 
-Start a docker container running postgres
+Start a Postgres database via your terminal:
+
+Postgres:
+`createuser -d vapor_username; createdb -h localhost -p 5432 -U vapor_username  vapor_database`
+
+Docker:
 ```
 docker run --name postgres \
   -e POSTGRES_DB=vapor_database \
