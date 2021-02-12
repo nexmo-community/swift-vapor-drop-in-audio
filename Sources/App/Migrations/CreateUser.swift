@@ -9,7 +9,6 @@ struct CreateUser: Migration {
             .create()
     }
     
-    //delete
     func revert(on database: Database) -> EventLoopFuture<Void> {
         database.schema(User.schema).delete()
     }

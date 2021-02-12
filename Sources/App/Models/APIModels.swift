@@ -30,11 +30,6 @@ struct UserAuth: Content {
     struct Response: Content {
         let name: String
         let jwt: String
-        
-        init(name: String, jwt: String) {
-            self.name = name
-            self.jwt = jwt
-        }
     }
 }
 

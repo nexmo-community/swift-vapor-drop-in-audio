@@ -15,7 +15,7 @@ func routes(_ app: Application) throws {
                 if let user = user {
                     let userAuthResponse = UserAuth.Response(
                         name: user.name,
-                        jwt: auth.makeJwt(sub: user.name, acl: CapiJwt.defaultPaths))
+                        jwt: auth.makeJwt(sub: user.name, acl: JwtClaim.defaultPaths))
                     return req.eventLoop.makeSucceededFuture(userAuthResponse)
                 } else {
                     return req.client.post(URI(scheme: "https", host: "api.nexmo.com", path: "v0.1/users")) { req in
@@ -26,7 +26,7 @@ func routes(_ app: Application) throws {
                         let user = User(id: responseBody.id, name: authBody.name)
                         let userAuthResponse = UserAuth.Response(
                             name: user.name,
-                            jwt: auth.makeJwt(sub: user.name, acl: CapiJwt.defaultPaths))
+                            jwt: auth.makeJwt(sub: user.name, acl: JwtClaim.defaultPaths))
                         return user.save(on: req.db).map { userAuthResponse }
                     }
                 }
