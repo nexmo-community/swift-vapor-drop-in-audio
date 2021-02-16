@@ -12,7 +12,7 @@ If you're new to Vonage, you can [sign up for a Vonage API account](https://dash
 
 + A Vonage API account.
 
-+ Docker
++ Docker/Postgres
 
 + Xcode 12 and Swift 5 or greater.
 
@@ -41,6 +41,52 @@ docker run --name postgres \
 ```
 
 Once done, build and run (CMD + R) and the server will be accessible on port 8080. 
+
+## Endpoints
+
+The project serves to 3 endpoints:
+
++ `/auth` (POST): 
+
+This returns a JWT to log the Client SDK in.
+
+Request Body:
+```
+{
+  "name": "value" // String - username
+}
+```
+Request Reponse:
+```
+{
+  "name": "value", // String - username
+  "jwt": "value" // String - JWT for the username
+}
+```
++ `/rooms` (GET):
+
+This returns a list of open chat rooms.
+Request Reponse:
+```
+{
+  "id": "value", // String - ID for the room/conversation
+  "display_name": "value" // String - Name for the room/conversation
+}
+```
++ `/rooms` (POST):
+Request Body:
+```
+{
+  "display_name": "value" // String - Name for the room/conversation
+}
+```
+Request Reponse:
+This allows the app to create a new room.
+```
+{
+  "id": "value" // String - ID for the room/conversation
+}
+```
 
 
 ## Getting Help
