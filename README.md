@@ -66,6 +66,7 @@ Request Reponse:
 + `/rooms` (GET):
 
 This returns a list of open chat rooms.
+
 Request Reponse:
 ```
 {
@@ -74,6 +75,9 @@ Request Reponse:
 }
 ```
 + `/rooms` (POST):
+
+This allows the app to create a new room.
+
 Request Body:
 ```
 {
@@ -81,7 +85,6 @@ Request Body:
 }
 ```
 Request Reponse:
-This allows the app to create a new room.
 ```
 {
   "id": "value" // String - ID for the room/conversation
