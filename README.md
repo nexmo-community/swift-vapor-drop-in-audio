@@ -70,10 +70,16 @@ This returns a list of open chat rooms.
 
 Request Reponse:
 ```
-{
-  "id": "value", // String - ID for the room/conversation
-  "display_name": "value" // String - Name for the room/conversation
-}
+[
+  {
+    "id": "value", // String - ID for the room/conversation
+    "display_name": "value" // String - Name for the room/conversation
+  },
+  {
+    "id": "value", // String - ID for the room/conversation
+    "display_name": "value" // String - Name for the room/conversation
+  }
+]
 ```
 + `/rooms` (POST):
 
