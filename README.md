@@ -12,8 +12,6 @@ If you're new to Vonage, you can [sign up for a Vonage API account](https://dash
 
 + A Vonage API account.
 
-+ Docker or Postgres
-
 + Xcode 12 and Swift 5 or greater.
 
 + [Vapor 4.0](https://vapor.codes) installed on your machine.
@@ -25,21 +23,6 @@ After cloning the project to your machine change into the project directory. Add
 Open it in Xcode by running `vapor xcode` and wait for Xcode to download the packages.
 
 Set a custom working directory for your project. Go to _Product > Scheme > Edit Scheme..._ and set the working directory to the root folder of your project.
-
-Start a Postgres database via your terminal. You can do so either with a Docker Postgres image or with Postgres directly:
-
-Postgres:
-
-`createuser -d vapor_username; createdb -h localhost -p 5432 -U vapor_username  vapor_database`
-
-Docker:
-```
-docker run --name postgres \
-  -e POSTGRES_DB=vapor_database \
-  -e POSTGRES_USER=vapor_username \
-  -e POSTGRES_PASSWORD=vapor_password \
-  -p 5432:5432 -d postgres
-```
 
 Once done, build and run (CMD + R) and the server will be accessible on port 8080. 
 
