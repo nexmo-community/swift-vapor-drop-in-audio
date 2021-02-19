@@ -4,6 +4,8 @@
 
 This is a Swift project that uses [Vapor](vapor.codes) to create a HTTP server for the [Vonage Conversation API](https://developer.nexmo.com/conversation/overview). This project was built to be used with an [accompanying app](https://github.com/nexmo-community/swift-client-sdk-drop-in-audio), learn more about both projects on [our blog](LINKICOMING).
 
+A JavaScript version of this server is available on [GitHub](https://github.com/nexmo-community/js-express-drop-in-audio).
+
 ## Welcome to Vonage
 
 If you're new to Vonage, you can [sign up for a Vonage API account](https://dashboard.nexmo.com/sign-up?utm_source=DEV_REL&utm_medium=github&utm_campaign=swift-vapor-sms) and get some free credit to get you started.
