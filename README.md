@@ -26,6 +26,8 @@ Open it in Xcode by running `vapor xcode` and wait for Xcode to download the pac
 
 Set a custom working directory for your project. Go to _Product > Scheme > Edit Scheme..._ and set the working directory to the root folder of your project.
 
+Add your Vonage Application ID to `routes.swift`
+
 Once done, build and run (CMD + R) and the server will be accessible on port 8080. 
 
 ## Endpoints
